@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smartfridge_IoT/musetap.git"
+    "url": "git+https://github.com/smartfridgeIoT/musetap.git"
   },
   "keywords": [
     "musetap",
@@ -27,9 +27,9 @@
   "author": "MuseTap Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smartfridge_IoT/musetap/issues"
+    "url": "https://github.com/smartfridgeIoT/musetap/issues"
   },
-  "homepage": "https://github.com/smartfridge_IoT/musetap#readme",
+  "homepage": "https://github.com/smartfridgeIoT/musetap#readme",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240101.0",
     "wrangler": "^3.0.0"
