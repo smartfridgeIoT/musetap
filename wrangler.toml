@@ -1,48 +1,52 @@
+# MuseTap — Cloudflare Workers (Wrangler v3)
+# Deploy target: musetap.workers.dev
 name = "musetap"
-type = "webpack"
-account_id = "" # Replace with your Cloudflare account ID
+main = "src/index.ts"
+compatibility_date = "2026-07-27"
+compatibility_flags = ["nodejs_compat"]
+
+# ⚠️ REQUIRED: Replace with your Cloudflare Account ID
+# Find it in: Cloudflare Dashboard → right sidebar
+account_id = ""
+
+# Deploy to workers.dev subdomain
 workers_dev = true
-route = ""
-zone_id = ""
 
-# Site config serves the ./public directory as static assets
-[site]
-bucket = "./public"
-entry-point = "."
+# ---- STATIC ASSETS (Wrangler v3 native) ----
+# Serves ./public via Workers Assets (replaces deprecated [site] block)
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"
 
-# TypeScript / webpack
-[build]
-command = "npm run build"
-upload.format = "service-worker"
-
-# Environment: production
+# ---- ENV: production ----
 [env.production]
 name = "musetap"
 workers_dev = true
-route = "musetap.workers.dev/*"
 
-[env.production.site]
-bucket = "./public"
-entry-point = "."
+[env.production.assets]
+directory = "./public"
 
-# Environment: staging (optional)
+# ---- ENV: staging ----
 [env.staging]
 name = "musetap-staging"
 workers_dev = true
 
-[env.staging.site]
-bucket = "./public"
-entry-point = "."
+[env.staging.assets]
+directory = "./public"
 
-# Secrets — set via `wrangler secret put` (do NOT hardcode here)
-# FAL_KEY, REPLICATE_API_TOKEN, MONGODB_URI (for future API endpoints)
+# ---- SECRETS ----
+# Set via: npx wrangler secret put <NAME>
+# DO NOT hardcode secrets here.
+# FAL_KEY = ""
+# REPLICATE_API_TOKEN = ""
+# MONGODB_URI = ""
 
-# KV namespaces (for future API caching)
+# ---- KV (for future API caching) ----
 # [[kv_namespaces]]
 # binding = "MUSETAP_CACHE"
 # id = ""
 
-# Vars
+# ---- VARS ----
 [vars]
 APP_NAME = "MuseTap"
 APP_VERSION = "1.0.0"
