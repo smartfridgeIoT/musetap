@@ -18,7 +18,7 @@ not_found_handling = "single-page-application"
 
 # ---- ENV: production ----
 [env.production]
-name = "musetap"
+name = "entry"
 workers_dev = true
 
 [env.production.assets]
