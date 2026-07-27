@@ -81,7 +81,7 @@ npm run deploy:staging
 
 1. Go to [Cloudflare Dashboard → Workers & Pages](https://dash.cloudflare.com)
 2. Click **Create application** → **Workers** → **Connect to Git**
-3. Select the `smartfridgeIoT/entry` repository
+3. Select the `smartfridgeIoT/musetap` repository
 4. Set build command: `npm install`
 5. Set deploy command: `npx wrangler deploy --env production`
 6. Every `git push` to `main` triggers automatic deployment
