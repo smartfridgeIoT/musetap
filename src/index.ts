@@ -1,10 +1,10 @@
 /**
- * MuseTap — Cloudflare Worker (Wrangler v3)
+ * Entry — Cloudflare Worker (Wrangler v3)
  *
  * Static assets in ./public are served natively via [assets] in wrangler.toml.
  * The Worker only handles non-asset routes (future API endpoints).
  *
- * Deploy target: musetap.workers.dev
+ * Deploy target: entry.workers.dev
  */
 
 export default {
@@ -18,7 +18,7 @@ export default {
     // Placeholder: future API routes (e.g. /api/generate, /api/decrypt)
     if (url.pathname.startsWith('/api/')) {
       return new Response(
-        JSON.stringify({ ok: true, message: 'MuseTap API v1 — coming soon' }),
+        JSON.stringify({ ok: true, message: 'Entry API v1 — coming soon' }),
         {
           status: 200,
           headers: {

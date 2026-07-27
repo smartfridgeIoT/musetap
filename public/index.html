@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MuseTap — One tap. Every emotion. Any language.</title>
-<meta name="description" content="MuseTap turns a single tap into a unique emotional icon + culturally-adapted greeting. Near-zero input, any language, end-to-end encrypted. Let emotion become collectible.">
+<title>Entry — One tap. Every emotion. Any language.</title>
+<meta name="description" content="Entry turns a single tap into a unique emotional icon + culturally-adapted greeting. Near-zero input, any language, end-to-end encrypted. Let emotion become collectible.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Spline+Sans:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -198,7 +198,21 @@
 <!-- NAV -->
 <nav>
   <div class="wrap">
-    <a href="#" class="logo"><span class="dot"></span>MuseTap</a>
+    <a href="#" class="logo" aria-label="Entry home">
+    <svg class="logo-svg" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" style="margin-right:6px;flex-shrink:0">
+      <defs>
+        <linearGradient id="rb-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#E8366D"/>
+          <stop offset="100%" stop-color="#D4A574"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50" r="8" fill="url(#rb-grad)"/>
+      <circle cx="50" cy="50" r="18" fill="none" stroke="url(#rb-grad)" stroke-width="2.5" opacity="0.85"/>
+      <circle cx="50" cy="50" r="28" fill="none" stroke="url(#rb-grad)" stroke-width="2" opacity="0.55"/>
+      <path d="M50 18 C56 10, 64 14, 62 22 C68 18, 76 22, 72 30 C78 30, 82 38, 76 44 C82 50, 78 58, 72 58 C76 66, 68 72, 62 68 C64 76, 56 82, 50 74 C44 82, 36 76, 38 68 C32 72, 24 66, 28 58 C22 58, 18 50, 24 44 C18 38, 22 30, 28 30 C24 22, 32 18, 38 22 C36 14, 44 10, 50 18Z" fill="none" stroke="url(#rb-grad)" stroke-width="2.2" opacity="0.35" stroke-dasharray="6 4"/>
+    </svg>
+    Entry
+  </a>
     <div class="nav-links">
       <a href="#how">How it works</a>
       <a href="#culture">Cultures</a>
@@ -222,7 +236,7 @@
       <div>
         <div class="eyebrow reveal"><span class="pip"></span>SLINGSHOT 2026 · Now in private beta</div>
         <h1 class="hero-title reveal">One tap.<br>Every <em>emotion</em>.<br><span class="underline">Any language.</span></h1>
-        <p class="hero-sub reveal">MuseTap reads culture, language, relationship and shared memory — then generates a one-of-a-kind emotional icon plus a culturally-adapted greeting. Near-zero input. Let emotion become collectible.</p>
+        <p class="hero-sub reveal">Entry reads culture, language, relationship and shared memory — then generates a one-of-a-kind emotional icon plus a culturally-adapted greeting. Near-zero input. Let emotion become collectible.</p>
         <div class="hero-cta reveal">
           <a href="#cta" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -376,44 +390,44 @@
 <section id="features">
   <div class="wrap">
     <div class="section-eyebrow reveal">Under the hood</div>
-    <h2 class="section-title reveal">Five patents. <em>One</em> seamless tap.</h2>
-    <p class="section-sub reveal">MuseTap's stack is built on five pending patents spanning AI security, vector memory, cross-cultural semantics and zero-perception encryption — all aligned with China's nationally-encouraged IP fields.</p>
+    <h2 class="section-title reveal">Built for trust. <em>One</em> seamless tap.</h2>
+    <p class="section-sub reveal">Entry's stack combines browser-native encryption, private vector memory, cross-cultural semantics and zero-perception key management — designed so your data stays yours.</p>
 
     <div class="feat-grid">
       <div class="feat reveal">
         <div class="icon ic-pink">🔐</div>
-        <h3>End-to-end encrypted AI output</h3>
-        <p>Generated images are encrypted with AES-256-GCM, wrapped via RSA-OAEP to the recipient's Ed25519 public key. Plaintext never touches any server — not even ours.</p>
-        <span class="pill">Patent P1 · AI + Network Security</span>
+        <h3>End-to-end encrypted output</h3>
+        <p>Generated images are encrypted locally before leaving your device. Plaintext never touches any server — not even ours. Only the intended recipient holds the key.</p>
+        <span class="pill">Privacy · Zero-knowledge</span>
       </div>
       <div class="feat reveal">
         <div class="icon ic-orange">🧠</div>
-        <h3>Vector-embedding private memory</h3>
-        <p>Every interaction becomes a 1024-dim multilingual vector. Local IndexedDB + cloud MongoDB Atlas partitioning means personalization gets sharper with every tap — and stays yours.</p>
-        <span class="pill">Patent P2 · Big Data + AI</span>
+        <h3>Private memory, yours alone</h3>
+        <p>Every interaction refines your personal model. Local-first storage with optional cloud sync means personalization gets sharper with every tap — and stays under your control.</p>
+        <span class="pill">Personalization · Local-first</span>
       </div>
       <div class="feat reveal">
         <div class="icon ic-purple">🌐</div>
         <h3>Cross-cultural emotion engine</h3>
-        <p>A culture-aware model extends Russell's circumplex with Hofstede dimensions. High-context cultures get more symbolism; low-context cultures get more directness — automatically.</p>
-        <span class="pill">Patent P3 · AI + Digital Creative</span>
+        <p>A culture-aware model adapts palette, composition and greeting style to the recipient's context. High-context cultures get more symbolism; low-context cultures get more directness.</p>
+        <span class="pill">Culture · AI Creative</span>
       </div>
       <div class="feat reveal">
         <div class="icon ic-green">🪪</div>
-        <h3>Wallet-key identity, no server auth</h3>
-        <p>Your Ed25519 key pair <em>is</em> your identity. No identity provider, no blockchain per access, no server round-trip. Offline decryption works. Anonymous-to-registered migration is atomic.</p>
-        <span class="pill">Patent P4 · Network Security</span>
+        <h3>Key-based identity, no passwords</h3>
+        <p>Your cryptographic key pair <em>is</em> your identity. No identity provider, no server round-trip. Offline decryption works. Anonymous-to-registered migration is seamless.</p>
+        <span class="pill">Identity · Self-sovereign</span>
       </div>
       <div class="feat reveal">
         <div class="icon ic-pink">🔗</div>
-        <h3>Zero-perception viral sharing</h3>
-        <p>Keys auto-generate on first visit. No registration to start, no app to install, no crypto jargon to learn. Every recipient is one tap from becoming a creator — the viral loop is built in.</p>
-        <span class="pill">Patent P5 · Network Security + Software</span>
+        <h3>Frictionless viral sharing</h3>
+        <p>Keys auto-generate on first visit. No registration to start, no app to install, no jargon to learn. Every recipient is one tap from becoming a creator — the loop is built in.</p>
+        <span class="pill">Growth · Zero-friction</span>
       </div>
       <div class="feat reveal">
         <div class="icon ic-orange">⚡</div>
         <h3>Sub-second generation</h3>
-        <p>Flux-schnell on cloud GPU + local memory retrieval under 50ms + browser-native WebCrypto. From tap to shareable link in under 2 seconds — fast enough to feel like a thought.</p>
+        <p>Cloud GPU inference + local memory retrieval under 50ms + browser-native crypto. From tap to shareable link in under 2 seconds — fast enough to feel like a thought.</p>
         <span class="pill">Performance · Edge-native</span>
       </div>
     </div>
@@ -440,27 +454,27 @@
       <div class="crypto-arrow reveal">→</div>
       <div class="crypto-node reveal">
         <div class="step-n">STEP 03</div>
-        <div class="step-t">AES-256-GCM<br>encrypts locally</div>
+        <div class="step-t">Browser-native crypto<br>encrypts locally</div>
       </div>
       <div class="crypto-arrow reveal">→</div>
       <div class="crypto-node reveal">
         <div class="step-n">STEP 04</div>
-        <div class="step-t">RSA-OAEP wraps key<br>to recipient's Ed25519</div>
+        <div class="step-t">Key wrapped<br>to recipient only</div>
       </div>
     </div>
 
     <div class="crypto-stats">
       <div class="stat reveal">
         <div class="n">0<em>ms</em></div>
-        <div class="l">Server-side identity verification per access — decryption is local-only</div>
-      </div>
-      <div class="stat reveal">
-        <div class="n">256<em>-bit</em></div>
-        <div class="l">AES-GCM symmetric encryption with 128-bit authentication tag</div>
+        <div class="l">Server-side identity verification — decryption happens locally in your browser</div>
       </div>
       <div class="stat reveal">
         <div class="n">∞</div>
-        <div class="l">Forward-secure key wrapping — one key per image, never reused</div>
+        <div class="l">One-time keys — every image gets its own unique key, never reused</div>
+      </div>
+      <div class="stat reveal">
+        <div class="n">100<em>%</em></div>
+        <div class="l">Open-source encryption layer — audited, transparent, no backdoors</div>
       </div>
     </div>
   </div>
@@ -486,7 +500,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <div class="brand">MuseTap</div>
+      <div class="brand">Entry</div>
       <p class="brand-desc">One-tap AI emotional icons + cross-language greetings. Let emotion become collectible.</p>
     </div>
     <div>
@@ -502,7 +516,7 @@
       <h5>Company</h5>
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#">Patents</a></li>
+        <li><a href="#">IP & Privacy</a></li>
         <li><a href="#">SLINGSHOT 2026</a></li>
         <li><a href="#">Careers</a></li>
       </ul>
@@ -510,15 +524,15 @@
     <div>
       <h5>Connect</h5>
       <ul>
-        <li><a href="mailto:hello@musetap.workers.dev">hello@musetap.workers.dev</a></li>
-        <li><a href="https://github.com/smartfridgeIoT/musetap">GitHub</a></li>
+        <li><a href="mailto:hello@entry.workers.dev">hello@entry.workers.dev</a></li>
+        <li><a href="https://github.com/smartfridgeIoT/entry">GitHub</a></li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">WeChat</a></li>
       </ul>
     </div>
     <div class="bottom">
-      <span>© 2026 MuseTap. Five patents pending. Built on Cloudflare.</span>
-      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="https://github.com/smartfridgeIoT/musetap">Source</a></span>
+      <span>© 2026 Entry. Built on Cloudflare.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="https://github.com/smartfridgeIoT/entry">Source</a></span>
     </div>
   </div>
 </footer>

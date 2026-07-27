@@ -1,24 +1,21 @@
-# MuseTap — Cloudflare Workers (Wrangler v3)
-# Deploy target: musetap.workers.dev
-name = "musetap"
+# Entry — Cloudflare Workers (Wrangler v3)
+# Deploy target: entry.workers.dev
+name = "entry"
 main = "src/index.ts"
 compatibility_date = "2026-07-27"
 compatibility_flags = ["nodejs_compat"]
 
 account_id = "e178c40dae686e916e1ae484c17682bf"
-
-# Deploy to workers.dev subdomain
 workers_dev = true
 
 # ---- STATIC ASSETS (Wrangler v3 native) ----
-# Serves ./public via Workers Assets (replaces deprecated [site] block)
 [assets]
 directory = "./public"
 not_found_handling = "single-page-application"
 
 # ---- ENV: production ----
 [env.production]
-name = "musetap"
+name = "entry"
 workers_dev = true
 
 [env.production.assets]
@@ -26,25 +23,13 @@ directory = "./public"
 
 # ---- ENV: staging ----
 [env.staging]
-name = "musetap-staging"
+name = "entry-staging"
 workers_dev = true
 
 [env.staging.assets]
 directory = "./public"
 
-# ---- SECRETS ----
-# Set via: npx wrangler secret put <NAME>
-# DO NOT hardcode secrets here.
-# FAL_KEY = ""
-# REPLICATE_API_TOKEN = ""
-# MONGODB_URI = ""
-
-# ---- KV (for future API caching) ----
-# [[kv_namespaces]]
-# binding = "MUSETAP_CACHE"
-# id = ""
-
 # ---- VARS ----
 [vars]
-APP_NAME = "MuseTap"
+APP_NAME = "Entry"
 APP_VERSION = "1.0.0"
