@@ -1,0 +1,40 @@
+{
+  "name": "musetap",
+  "version": "1.0.0",
+  "description": "MuseTap — One-tap AI emotional icons + cross-language greetings. Static landing page deployed on Cloudflare Workers.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo \"No build step required — static site\"",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "deploy:staging": "wrangler deploy --env staging",
+    "tail": "wrangler tail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartfridge_IoT/musetap.git"
+  },
+  "keywords": [
+    "musetap",
+    "ai",
+    "emotion",
+    "cross-cultural",
+    "encryption",
+    "cloudflare-workers",
+    "slingshot-2026"
+  ],
+  "author": "MuseTap Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartfridge_IoT/musetap/issues"
+  },
+  "homepage": "https://github.com/smartfridge_IoT/musetap#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240101.0",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0"
+  }
+}

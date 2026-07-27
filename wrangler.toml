@@ -1,0 +1,48 @@
+name = "musetap"
+type = "webpack"
+account_id = "" # Replace with your Cloudflare account ID
+workers_dev = true
+route = ""
+zone_id = ""
+
+# Site config serves the ./public directory as static assets
+[site]
+bucket = "./public"
+entry-point = "."
+
+# TypeScript / webpack
+[build]
+command = "npm run build"
+upload.format = "service-worker"
+
+# Environment: production
+[env.production]
+name = "musetap"
+workers_dev = true
+route = "musetap.workers.dev/*"
+
+[env.production.site]
+bucket = "./public"
+entry-point = "."
+
+# Environment: staging (optional)
+[env.staging]
+name = "musetap-staging"
+workers_dev = true
+
+[env.staging.site]
+bucket = "./public"
+entry-point = "."
+
+# Secrets — set via `wrangler secret put` (do NOT hardcode here)
+# FAL_KEY, REPLICATE_API_TOKEN, MONGODB_URI (for future API endpoints)
+
+# KV namespaces (for future API caching)
+# [[kv_namespaces]]
+# binding = "MUSETAP_CACHE"
+# id = ""
+
+# Vars
+[vars]
+APP_NAME = "MuseTap"
+APP_VERSION = "1.0.0"
