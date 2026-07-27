@@ -5,9 +5,7 @@ main = "src/index.ts"
 compatibility_date = "2026-07-27"
 compatibility_flags = ["nodejs_compat"]
 
-# ⚠️ REQUIRED: Replace with your Cloudflare Account ID
-# Find it in: Cloudflare Dashboard → right sidebar
-account_id = ""
+account_id = "e178c40dae686e916e1ae484c17682bf"
 
 # Deploy to workers.dev subdomain
 workers_dev = true
